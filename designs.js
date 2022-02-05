@@ -26,6 +26,7 @@ let b = 0;
 do
 {
     a++
+    b=0
     //Select size input
     let cell = DrowTable.insertRow(0)
     do
@@ -34,9 +35,9 @@ do
         //Select size input
         cell.insertCell(0);
         // Select color input
-        cell.addEventListener("click",function()
+        cell.addEventListener("click",function(e)
         {
-            cell.style.backgroundColor = PixleColor.value;
+            e.target.style.backgroundColor = PixleColor.value;
         })
     }
     while (b < PixelsWidth.value);
